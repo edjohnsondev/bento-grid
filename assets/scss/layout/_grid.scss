@@ -8,7 +8,7 @@
     margin: 0 auto;
     padding: 3.2rem;
 
-    @include respond('sm') {
+    @include respond('xs') {
         padding: 3.2rem 0.8rem;
     }
 }
@@ -30,7 +30,7 @@ body {
         min-height: unset;
     }
 
-    @include respond('sm') {
+    @include respond('xs') {
         grid-template-columns: 1fr;
     }
 }
