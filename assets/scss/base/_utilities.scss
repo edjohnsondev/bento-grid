@@ -1,0 +1,18 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/functions' as *;
+
+//* Colors
+@each $key, $color in $colors {
+    .#{$key} {
+        color: $color;
+    }
+
+    .bg-#{$key} {
+        background-color: $color;
+    }
+}
+
+.italic {
+    font-style: italic;
+}

@@ -1,0 +1,89 @@
+@use "mixins" as *;
+
+// Colors
+$purple-100: #DBD1FC;
+$purple-500: #7551DC;
+$yellow-100: #F9EEE2;
+$yellow-500: #FFCC6A;
+$white: #FFFFFF;
+$black: #121212;
+
+$colors: (
+    'purple-100': $purple-100,
+    'purple-500': $purple-500,
+    'yellow-100': $yellow-100,
+    'yellow-500': $yellow-500,
+    'white': $white,
+    'black': $black,
+);
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+$dmSans: "DM Sans", sans-serif;
+
+$regular: 400;
+$medium: 500;
+
+%textPresetOne {
+    @include typography(6.2rem, 0.935, $dmSans, -3px);
+    font-weight: $medium;
+
+    @include respond('md') {
+        @include typography(5.4rem, 0.888, $dmSans, -0.216rem);
+    }
+
+    @include respond('sm') {
+        @include typography(4.6rem, 0.913, $dmSans, -0.184rem);
+    }
+}
+
+%textPresetTwo {
+    @include typography(4rem, 0.90, $dmSans, -2px);
+    font-weight: $medium;
+
+    @include respond('md') {
+        @include typography(3.6rem, 0.833, $dmSans, -0.216rem);
+    }
+
+    @include respond('sm') {
+        @include typography(3.2rem, 0.875, $dmSans, -0.192rem);
+    }
+}
+
+%textPresetThree {
+    @include typography(3.2rem, 0.875, $dmSans, -2px);
+    font-weight: $medium;
+
+    @include respond('md') {
+        @include typography(2.8rem, 0.929, $dmSans, -0.168rem);
+    }
+
+    @include respond('sm') {
+        @include typography(2.6rem, 0.923, $dmSans, -0.156rem);
+    }
+}
+
+%textPresetFour {
+    @include typography(1.8rem, 1.11, $dmSans, 0);
+    font-weight: $regular;
+}
+
+//* Grid breakpoints
+$breakpoints: (
+    xs: 0,
+    sm: 575px,
+    md: 767px,
+    lg: 991px,
+    xl: 1199px,
+    xxl: 1399px,
+);
+
+// Spacing
+$spacing: (
+    500: 4rem,
+    400: 3.2rem,
+    300: 2.4rem,
+    200: 1.6rem,
+    100: 8rem,
+);
